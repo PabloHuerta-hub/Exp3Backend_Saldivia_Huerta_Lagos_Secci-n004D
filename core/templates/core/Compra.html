@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+        <link rel="shortcut icon" href="./img/shorcuticon.png">
+        <link rel="stylesheet" href="css/estilos compra.css">
+        <link rel="stylesheet" href="css/styleblack.css">
+        <script src="js/temasdecolor.js"></script>
+        <script src="js/"></script>
+        <title>Formulario de compra</title>
+
+        <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName('needs-validation');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() == false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+        </script>
+    
+    </head>
+<body>
+  <nav class="navbar navbar-expand-lg fondo letras sticky-top colornavbar letrascolor" id="navbar">
+    <div class="container" style="font-size: 5; ">
+      <a class="navbar-brand letras"  href="#" style="font-size: larger;"><img class="logo"src="./img/Logo.png" alt=""> <span class="sr-only">(current)</span></a>
+      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"  data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" >           
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarResponsive" >
+        <ul class="navbar-nav  ml-auto">
+          <li class="nav-item active" > 
+            <a class="nav-link letraschicas letrascolor" id="letrasnavegacion1" href="./Inicio.html">Inicio
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item"> 
+            <a class="nav-link letraschicas letrascolor" id="letrasnavegacion2"   href="./QuienesSomos.html">Sobre nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link letraschicas letrascolor" id="letrasnavegacion3"  href="./Cartelera.html">Cartelera</a>
+          </li>
+          <li>
+            <a class="nav-link letraschicas letrascolor" id="letrasnavegacion4"  href="#">Comprar</a>
+          </li>
+          <li>
+            <a class="nav-link letraschicas letrascolor" href="FormularioRegistro.html">Registrarse</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a href="#" class="nav-link dropdown-toogle letraschicas letrascolor" id="letrasnavegacion4"  id="navbardrop" data-toggle="dropdown">Iniciar sesion</a>
+              </li>
+              <li class="nav-item dropdown ">
+                <a href="#" class="nav-link dropdown-toogle letraschicas letrascolor" id="letrasnavegacion4"  id="navbardrop" data-toggle="dropdown">Temas</a>
+                
+                <div class="dropdown-menu fondo color" id="menu">
+                  <input type="button" href="#" class="dropdown-item letraschicas "  id="btnmorado" value="Morado" onclick="colores('morado')"></input>
+                  <input type="button" href="#" class="dropdown-item letraschicas "  id="btncafe" value="Café" onclick="colores('cafe')" ></input>
+                  <input type="button" href="#" class="dropdown-item letraschicas "  id="btnnegro" value="Negro"  onclick="colores('negro')"></input>
+                </div>
+               </li>
+
+             <li>
+                <form class="form-inline form-control-sm" action="#" >
+                    <input class="form-control mr-sm-2 " type="text" placeholder="Nombre pelicula">
+                    <button class="btn btn-danger boton botoncolor" id="boton" type="submit">Buscar</button>
+                  </form>
+             </li>
+            </div>
+      </div>  
+  </nav>
+        <div class="container " align="center" style="margin-top: 3cm; margin-bottom: 3cm;">
+          <div class="jumbotron formulario color "  id="formulario">
+            <br>
+              <h1 class="headerscolor " id="headers" style="margin-left: 20px;"> Compra Entradas: </h1>
+              <br>
+              <form action="#" class="letraschicas" id="formularioletras" onsubmit="return validacion()" >
+                  <div class="form-group">
+            <form class="was-validated">
+              <div class="form-group">
+              <label for="SeleccionPeli" style="margin-left: 25px;"><p class="letrascolor">Selecciona Una Pelicula</p></label>
+              <select class="custom-select " id="SeleccionPeli" required>
+                  <option>--Selecciona Pelicula--</option>
+                  <option value=" ">The Batman</option>
+                  <option value="1">Justice League Snyder's cut</option>
+                  <option value="2">Un Amor Extraordinario</option>
+                  <option value="3">Back to the future</option>
+                  <option value="4">GhostBusters 2</option>
+                  <option value="5">TopGun</option>
+              </select>
+              <div class="invalid-feedback"> Porfavor selecciona alguna pelicula</div>
+              </div>
+              <br>
+            </form>
+              
+
+              <div class="form-group">
+                  <label for="Entrada" style="margin-left: 25px;"> <p class="letrascolor">Selecciona Cantidad de entradas (max 6) </p></label>
+                  <select class="form-control " id="Entrada">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                  </select>        
+              </div>
+              <br>
+
+              <div class="form-group">
+                  <label for="Correo" style="margin-left: 25px;"> <p class="letrascolor">Escribe tu correo </p></label>
+                  <input type="email" class="form-control " id="Correo" placeholder="name@example.com">
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="Telefono" style="margin-left: 25px;"><p class="letrascolor">Telefono</p></label>
+                  <input type="number" class="form-control " id="Telefono" placeholder="Ingresa tu numero de Telefono">
+                </div>
+              <br>
+              <br>
+              <h1 class="headerscolor " style="margin-left: 20px;" >Ingresa los datos para la compra:</h1>
+              <div class="form-group">
+  
+                  <div class="form-group">
+                  <label for="numerodetarjeta" style="margin-left: 25px;" ><p class="letrascolor"> Numero de Tarjeta </p></label>
+                  <input type="number" name="numerodetarjeta" class="form-control" style="margin-left: 20px; width: 400px;" required>
+
+                  </div>
+                  <br>
+                  <div class="form-group">
+                  <label for="fechacaducidad" style="margin-left: 25px;" > <p class="letrascolor"> Fecha de caducidad </p></label>
+                  <select class="form-control letrascolor" id="fechacaducidad">
+                      <option>--</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                  </select>
+                  
+                  <select class="form-control letrascolor" id="fechacaducidad">
+                      <option>--</option>
+                      <option>22</option>
+                      <option>23</option>
+                      <option>24</option>
+                      <option>25</option>
+                      <option>26</option>
+                      <option>27</option>
+                      <option>28</option>
+                      <option>29</option>
+                  </select>
+                  </div>
+                  <br>
+                  <div>
+                      <label for="nroverificador " style="margin-left: 25px;" ><p class="letrascolor">Numero Verificador</p></label>
+                      <input type="number" id="nroverificador" class="form-control">
+                  </div>
+                  <br>
+                  <h1 style="margin-left: 20px;" class="letrascolor">Datos Personales </h1>
+                  
+                  <br>
+                      <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                          <div class="col-md-4 mb-3">
+                            <label for="validationCustom01" class="letrascolor">Nombre</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-3">
+                            <label for="validationCustom02" class="letrascolor">Apellido</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="Ingresa tu apellido" required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-3">
+                            <label for="validationCustomUsername" class="letrascolor">Nombre de usuario</label>
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                              </div>
+                              <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                              <div class="invalid-feedback">
+                                Porfavor escoge un NickName.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom03" class="letrascolor">ciudad</label>
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="Ciudad" required>
+                            <div class="invalid-feedback">
+                              Porfavor ingresa una ciudad.
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="validationCustom04" class="letrascolor">Region</label>
+                            <input type="text" class="form-control" id="validationCustom04" placeholder="Region" required>
+                            <div class="invalid-feedback">
+                              Porfavor ingresa una Region.
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="validationCustom05" class="letrascolor"> Codigo Postal</label>
+                            <input type="text" class="form-control" id="validationCustom05" placeholder="Codigo Postal" required>
+                            <div class="invalid-feedback">
+                              Porfavor ingresa un Codigo Postal.
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+              <br>
+              <br>
+
+              <label class="form-check-label" style="margin-left: 20px;">
+                  <input class="form-check-input letrascolor" type="checkbox" required> <p class="letrascolor"> Acepto terminos y condiciones de la pagina</p>
+                </label>
+
+                <br>
+
+                <label class="form-check-label" style="margin-left: 20px;">
+                  <input class="form-check-input letrascolor" type="checkbox"> <p class="letrascolor">quiero recibir notificacion de ofertas</p> 
+                </label>
+                <br>
+              <br>
+              <input type="submit" class="btn btn-danger botoncolor" id="boton1" value="Comprar" >
+              <input type="reset" style="margin-left: 120px;" class="btn btn-danger botoncolor" id="boton1" value="Borrar todo" >
+                <br>
+                <br>
+                  </div>
+              </form>
+            </div>
+            <div class="container my-5 text-center">
+              <h3 class="letrascolor">Recomendacion de pelicula:</h3>
+              <button class="btn btn-danger botoncolor w-100" onclick="traer()" style="width: 300px;">Obtener</button>
+              <div class="mt-5" id="contenido">
+                  
+              </div>
+          </div>
+      
+          <script>
+              var contenido = document.querySelector('#contenido')
+              function traer() {
+                  fetch('https://randomuser.me/api/')
+                  .then(res => res.json())
+                  .then(data => {
+                      console.log(data.results['0'])
+                      contenido.innerHTML = `
+                      <img src="${data.results['0'].picture.large}" width="100px" class="img-fluid rounded-circle"> 
+                      <p class="letrascolorapi" >Nombre: ${data.results['0'].name.first}</p>
+                      <p class="letrascolorapi" >Apellido: ${data.results['0'].name.last}</p>
+                      <p class="letrascolorapi">Recomendacion: </p>
+                      `
+                  })
+              } 
+          </script>
+          </div>
+      </div>  
+
+<!-- footer-->
+<footer class="py-1 fondo colornavbar" id="footer" >
+  <div class="container">
+    <div class="shared-panel letraschicas" id="letrasfooter">
+      <p class="m-0 text-center " style="font-size: larger;"> Mario Lagos-Nicolas Saldivia-Pablo Huerta-@Copyrigth Derechos reservados</p>
+      <p class="m-0 text-center " style="font-size: larger;">Redes sociales:</p>
+      <a target="_blank" class="shared fb st3" style="margin-left: 480px;" title="Facebook"></a>	
+      <a target="_blank" class="shared tt st3" title="Twitter"></a>
+      <a target="_blank" class="shared gp st3" title="Google+"></a>
+      <a target="_blank" class="shared ce st3" title="Email"></a>
+    </div>
+  </div>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

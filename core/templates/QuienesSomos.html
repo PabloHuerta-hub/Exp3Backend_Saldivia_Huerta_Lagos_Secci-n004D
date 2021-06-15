@@ -1,0 +1,113 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>Sobre Nosotros</title>{% endblock %}
+   {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SobreNosotros</title>
+    <link rel="stylesheet" href="{% static 'css/styleblack.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/estilos quienesomos.css'%}">
+   
+</head>
+<body class="color">
+ 
+        </div>
+    <main>
+        <div class="contenedor">
+            <h1 class="letrasmasgrandes" >Bienvenido a la sección de donde pondrán conocer sobre nosotros, somos un grupo de 
+              de estudiantes, amantes de las películas, que te tendrán todas tus películas favoritas en cartelera.
+
+            </h1>
+            
+
+        </div>
+    </main>
+        <div class="salascine" >
+          <figure>
+            <img src="{%static 'img/sobrenosotros/pantalla.jpg'%}" width="200" height="100" title="SalasCineDuoc"/>
+          <div class="capa">
+            <h3>Salas de Cine</h3>
+            <p>Nuestras salas de cine tienen de todo para que la comodidad de nuestro
+              publico sea la mejor, calidad de películas, y clásicos que quiera ver la gente, y todas las medidas 
+              preventivas para el covid19, los dejo invitados a venir 
+              a nuestras salas de cine.
+            </p>
+    </div>
+  </figure>
+</div>
+        <h1 class="letrasmasgrandes">Nuestro sitio web y nuestras salas, 
+          tienen el objetivo de que las personas disfruten 
+            de todo tipo de títulos y que puedan ver sus películas favoritas 
+            cuando ellos quieran y a la hora que sea y que no tengan límite de solo algunas películas.
+
+          </h1>
+
+        <div class="logo1">
+            <img src="{%static 'img/sobrenosotros/Logo.png'%}" width="600" height="300"
+                title="primer logo">
+
+        </div>
+        <h1 class="letrasmasgrandes">Nuestra empresa es Cine Duoc y somos una empresa la cual busca la satisfacción de 
+          la gente, través de las películas, poder hacer recuerdos en nuestro cine, y en 
+          el caso de no salir, hacerlo desde su casa a través de nosotros y poder generar los mejores momentos a nuestros
+          clientes.
+
+        </h1>
+        
+        
+        <div class="boleteria">
+          <figure>
+            <img src="{%static 'img/sobrenosotros/Boleteria.jpg'%}" width="600" height="300"
+                 title="boleteria">
+                 <div class="capa2">
+                   <h3>Nuestras Boleterias</h3>
+                   <p>Nuestras boleterías tienen todas las medidas contra el covid19,
+                    donde podrás y programar la película que quieras ver y poder comprar la comida y 
+                    recuerdos clásicos de tus películas favoritas.
+                   </p>
+                 </div>
+                </figure>
+                </div>
+        <h1 class="letrasmasgrandes">Nuestra misión es generar buenos momentos, seguir nuestros sueños de amantes de las películas
+          y seguir a futuro, y darles a nuestros clientes y quienes comparten las películas y nuestra página la mejor calidad posible
+          y lograr todos nuestros objetivos.
+        </h1>
+        <div class="todo">
+            <img src="{%static 'img/sobrenosotros/6.jpg'%}" width="600" height="300"
+                 title="todo">
+        </div>
+        <h1 class="letrasmasgrandes">Nuestra visión es lograr ser una de las mejores salas de cine y la mejor plataforma que suba contenido
+          de todos los tipos y poder tener a la gente hablando de cine Duoc en todas las regiones.	
+        </h1>
+        <div class="boletos">
+          <figure>
+            <img src="{%static 'img/sobrenosotros/Duoc.jpg'%}" width="600" height="400"
+                 title="boletos">
+                 <div class="capa3">
+                   <h3>Duoc UC</h3>
+                   <p>Somos estudiantes de Duoc UC, sede de Maipú amantes de las películas y sobre todo 
+                    de las películas clásicas y queremos hacer de todo para que la comodidad de la gente sea la mejor.
+                   </p>
+                 </div>
+                </figure>
+        </div>
+        <h1 class="letrasmasgrandes">te invito a conocernos y ver nuestro video de presentación donde conocerás un poco más de nosotros
+        </h1>
+            <h1 class="video" ><iframe width="560" height="315" src="https://www.youtube.com/embed/4_AWk-BOLgo" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </h1>
+
+       
+          <script src="{% static 'js/main.js'%}"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>       
+        {% endblock %}
+    </body>
+    </html>
