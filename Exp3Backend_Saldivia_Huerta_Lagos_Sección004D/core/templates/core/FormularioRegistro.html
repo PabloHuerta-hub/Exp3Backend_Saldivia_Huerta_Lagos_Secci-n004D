@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Formulario de registro</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="./img/shorcuticon.png">
+    <link rel="stylesheet" href="css/estilos formularioregistro.css">
+    <link rel="stylesheet" href="css/styleblack.css">
+    <script src="js/temasdecolor.js"></script>
+    
+
+</head>
+
+<body >
+  <body class="color">
+    <nav class="navbar navbar-expand-lg fondo letras sticky-top colornavbar letrascolor" id="navbar">
+      <div class="container" style="font-size: 5; ">
+        <a class="navbar-brand letras"  href="#" style="font-size: larger;"><img class="logo"src="./img/Logo.png" alt=""> <span class="sr-only">(current)</span></a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"  data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" >           
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarResponsive" >
+          <ul class="navbar-nav  ml-auto">
+            <li class="nav-item active" > 
+              <a class="nav-link letraschicas letrascolor" id="letrasnavegacion1" href="./Inicio.html">Inicio
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link letraschicas letrascolor" id="letrasnavegacion2"   href="./QuienesSomos.html">Sobre nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link letraschicas letrascolor" id="letrasnavegacion3"  href="./Cartelera.html">Cartelera</a>
+            </li>
+            <li>
+              <a class="nav-link letraschicas letrascolor" id="letrasnavegacion4"  href="./Compra.html">Comprar</a>
+            </li>
+            <li>
+              <a class="nav-link letraschicas letrascolor" href="FormularioRegistro.html">Registrarse</a>
+            </li>
+            <li class="nav-item dropdown ">
+              <a href="#" class="nav-link dropdown-toogle letraschicas letrascolor" id="letrasnavegacion4"  id="navbardrop" data-toggle="dropdown">Iniciar sesion</a>
+                </li>
+                <li class="nav-item dropdown ">
+                  <a href="#" class="nav-link dropdown-toogle letraschicas letrascolor" id="letrasnavegacion4"  id="navbardrop" data-toggle="dropdown">Temas</a>
+                  
+                  <div class="dropdown-menu fondo color" id="menu">
+                    <input type="button" href="#" class="dropdown-item letraschicas "  id="btnmorado" value="Morado" onclick="colores('morado')"></input>
+                    <input type="button" href="#" class="dropdown-item letraschicas "  id="btncafe" value="Café" onclick="colores('cafe')" ></input>
+                    <input type="button" href="#" class="dropdown-item letraschicas "  id="btnnegro" value="Negro"  onclick="colores('negro')"></input>
+                  </div>
+                 </li>
+  
+               <li>
+                  <form class="form-inline form-control-sm" action="#" >
+                      <input class="form-control mr-sm-2 " type="text" placeholder="Nombre pelicula">
+                      <button class="btn btn-danger boton botoncolor" id="boton" type="submit">Buscar</button>
+                    </form>
+               </li>
+              </div>
+        </div>  
+    </nav>
+      <div class="container" align="center" style="margin-top: 3cm; margin-bottom: 3cm;">
+        <div class="jumbotron formulario color" id="formulario">
+        <h1 class="headers headerscolor" id="headers"> Registro de cuenta: </h1>
+        <br>
+        <form action="#" class="letraschicas letrascolor" id="formularioletras" onsubmit="return validacion()">
+            <div class="form-group">
+                <label for="nom"> 
+                    <label for="nom"> Nombre: </label>
+                    <input type="nom" class="form-control" placeholder="Nombre" id="nom">  
+                </label>
+                <label for="ape" style="margin-left: 1cm;"> 
+                    <label for="user"> Apellido: </label>
+                    <input type="user" class="form-control" placeholder="Ingrese su apellido" id="ape">  
+                </label>
+            </div>
+
+        <div class="form-group">
+            <label for="user"> 
+                <label for="user"> Nombre de usuario: </label>
+                <input type="user" class="form-control" placeholder="Ingrese nombre de usuario" id="user">  
+            </label>
+            <label for="direccion" style="margin-left: 1cm;">
+                <label for="direccion">direccion: </label><br>
+                <input type="address" class="from-control" placeholder="Ingrese su direccion" id="direccion">
+                </label>
+
+        </div>
+        <div class="form-group ">
+            <label for="email">
+            <label for="email">Correo electronico: </label><br>
+            <input type="email" class="from-control" placeholder="Ingrese su correo" id="email">
+            </label>
+            <label for="pass" style="margin-left: 1cm;"> 
+                <label for="pass"> Contraseña: </label>
+                <input type="password" class="form-control" placeholder="Ingrese su Contraseña" id="pass">  
+            </label>
+        </div>
+        <label class="form-check-label" style="margin-left: 20px;">
+            <input class="form-check-input" type="checkbox" required> Acepto terminos y condiciones de la pagina
+
+          </label>
+          <br>
+          <label class="form-check-label" style="margin-left: 20px;">
+            <input class="form-check-input" type="checkbox"> Si, quiero recibir noticias de la página
+          </label>
+          <br>
+        <br>
+        <input type="submit" class="btn btn-danger boton botoncolor" id="boton1" value="Registrarse" >
+        <input type="reset" style="margin-left: 10px;" class="btn btn-danger boton botoncolor" id="boton1" value="Borrar todo" >
+
+        </form>
+        <br>
+
+    </div>
+      </div>
+</body>
+
+ <!-- footer-->
+ <footer class="py-1 fondo colornavbar" id="footer" >
+  <div class="container">
+    <div class="shared-panel letraschicas letrascolor" id="letrasfooter">
+      <p class="m-0 text-center " style="font-size: larger;"> Mario Lagos-Nicolas Saldivia-Pablo Huerta-@Copyrigth Derechos reservados</p>
+      <p class="m-0 text-center " style="font-size: larger;">Redes sociales:</p>
+      <a target="_blank" class="shared fb st3" style="margin-left: 480px;" title="Facebook"></a>	
+      <a target="_blank" class="shared tt st3" title="Twitter"></a>
+      <a target="_blank" class="shared gp st3" title="Google+"></a>
+      <a target="_blank" class="shared ce st3" title="Email"></a>
+    </div>
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>      
+</html>

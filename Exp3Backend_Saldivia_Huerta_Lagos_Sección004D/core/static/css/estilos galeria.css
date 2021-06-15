@@ -1,0 +1,149 @@
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #141414;
+
+}
+body .descripcionPrincipal{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color:darkgrey;
+}
+
+header{
+    padding: 30px 0;
+}
+
+
+header .logotipo{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: #ff0000;
+    font-size: auto;
+
+}
+header nav a{
+    text-decoration: none;
+    color:#AAA;
+    /* aqui use el margin-right para separar cada una de las opciones del menu*/
+    margin-right: 20px;
+}
+
+/* Peliculas*/
+
+
+#peli1{
+    background: none;
+    width:210px;
+    height:290px;
+    padding:1%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 20%;
+}
+
+.btn{
+    border-color: #e50914;
+}
+.btn:hover{
+    border-color: #ec7253;
+    transform: scale(1.2);
+    transition: all.2s linear;
+}
+.btn:not(:hover){
+    border-color: #ec7253;
+
+    transform: scale(1);
+    transition: all.2s linear;
+}
+
+
+
+/*footer */
+footer{
+    width:100%;
+    background: #202020;
+    color:white;
+}
+
+.colum2{
+    max-width: 400px;
+}
+
+.colum h1{
+    font-size:22px ;
+}
+
+
+.row img{
+    width:35px;
+    height:36px;
+}
+
+.row label{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #C7C7C7;
+}
+
+
+/*footer*/
+
+/*Distintas letras */
+.letras{
+    /*Cambio de fuente y tamaño de esta (titulos, footer y navbar)*/
+    font-size: x-large; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #e50914;
+    text-shadow:-2px -2px 2px black;
+}
+.letraschicas{
+        /*Cambio de fuente y tamaño de esta (parrafos)*/
+    text-shadow:-1px -1px 1px black;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+}
+.boton{
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.fondo{
+    background-color:#0a0a0a;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+}
+.shared-panel{
+	overflow: auto;/* especifica si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque*/
+}
+.shared {
+	display: inline-block; /*establece le visualizacion interna y externa, en este caso genera uno o mas cuadros de elementos en linea*/
+	width: 30px; 
+	height: 30px;
+	margin: 5px 0; 
+	padding: 0; 
+	background: url("../img/shared.png"); /* Posicion imagenes de las redes sociales*/
+	margin-right: 5px; 
+	cursor: pointer; /* indica que el cursor es un puntero y indica un link*/
+	border-radius: 50%; 
+}
+
+/*Posicion y colores de los bloques de las redes sociales*/
+.shared.gp {background-position: 0px 0px; background-color: #E62B34;} 
+.shared.tt {background-position: 0px -30px; background-color: #43BDF0;}
+.shared.ce {background-position: 0px -60px; background-color: #8A898D;}
+.shared.fb {background-position: 0px -120px; background-color: #6081C4;}
+/*Bordes redondeados de los bloques de redes sociales*/
+.st2{border-radius: 0;}
+.st3{border-radius: 5px;}
+a:hover{
+    color:#e50914;
+}
