@@ -31,7 +31,7 @@ class UsuariosForm(forms.ModelForm):
                     'id':'apellido',
                 }
             ),
-             'nombreUsuario':forms.TextInput(
+             'nomUsuario':forms.TextInput(
                 attrs={
                     'class':'form_control',
                     'placeholder':'Ingrese nombre de usuario',
