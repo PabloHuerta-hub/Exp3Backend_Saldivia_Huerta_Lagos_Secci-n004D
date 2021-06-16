@@ -416,7 +416,7 @@ footer{
 	height: 30px;
 	margin: 5px 0; 
 	padding: 0; 
-	background: url("../img/shared.png") no-repeat; 
+	background: url(../img/footer/shared.png) no-repeat; 
 	margin-right: 5px; 
 	cursor: pointer;
 	border-radius: 50%;

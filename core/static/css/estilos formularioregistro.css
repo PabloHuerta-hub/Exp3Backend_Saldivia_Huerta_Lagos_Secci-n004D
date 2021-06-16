@@ -41,7 +41,7 @@ a:hover{
     color:#e50914;
 }
 body{
-    background-image: url(/core/static/css/fondo.jpg);
+    background-image: url(../img/Formularios/fondo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -60,7 +60,7 @@ body{
 	height: 30px;
 	margin: 5px 0; 
 	padding: 0; 
-    background: url('./shared.png'); 
+    background: url(../img/footer/shared.png); 
 	margin-right: 5px; 
 	cursor: pointer; 
 	border-radius: 50%; 
