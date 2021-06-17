@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
-from .models import Usuarios
-from .forms import UsuariosForm
+from .models import Usuarios,Compras
+from .forms import UsuariosForm,ComprasForm
 # Create your views here.
 def inicio(request):
     return render(request,'Inicio.html')
@@ -20,3 +20,12 @@ def formularioregistro(request):
     else:
         Usuarios_Form=UsuariosForm()
     return render(request,'core/FormularioRegistro.html',{'Usuarios_form':Usuarios_Form})
+def formulario_compra(request):
+    if request.method == 'POST':
+        Compras_Form=ComprasForm(request.POST)
+        if Compras_Form.is_valid():
+            Compras_Form.save()
+            return redirect('Inicio')
+    else:
+        Compras_Form=ComprasForm()
+    return render(request,'core/Compra.html',{'Compras_form':Compras_Form})
