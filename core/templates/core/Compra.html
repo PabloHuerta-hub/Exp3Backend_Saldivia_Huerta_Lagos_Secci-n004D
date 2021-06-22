@@ -1,0 +1,167 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      {% load static %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static './css/estilos compra.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static './css/styleblack.css' %}" type="text/css">
+        <title>Formulario de compra</title>
+
+        <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName('needs-validation');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() == false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+        </script>
+    
+    </head>
+<body>
+
+  <div class="container" align="center" style="margin-top: 3cm; margin-bottom: 3cm;">
+        <div class="jumbotron formulario color" id="formulario">
+        <h1 class="headers headerscolor" id="headers"> Registro de cuenta: </h1>
+        <br>
+        <form action="#" method="POST" class="letraschicas letrascolor" id="formularioletras">
+            {%csrf_token%}
+            <div class="form-group">
+              <h2 class="headers headerscolor">Datos de contacto:</h2>
+              <label for="">
+                {{Compras_form.pelicula.label}}
+                <br>
+                {{Compras_form.pelicula}}
+              </label>
+              <br>
+              <label for="entradas">
+                {{Compras_form.entradas.label}}
+                <br>
+                {{Compras_form.entradas}}
+              </label>
+              <label for="correo">
+                {{Compras_form.correo.label}}
+                <br>
+                {{Compras_form.correo}}
+              </label>
+              <label for="telefono">
+                {{Compras_form.telefono.label}}
+                <br>
+                {{Compras_form.telefono}}
+              </label>
+            </div>
+              <div class="form-group">
+                <h2 class="headers headerscolor">Datos de compra:</h2>
+                <br>
+                <label for="nrotarjeta">
+                  {{Compras_form.nrotarjeta.label}}
+                  <br>
+                  {{Compras_form.nrotarjeta}}
+                </label>
+                <label for="anno">
+                  {{Compras_form.anno.label}}
+                  <br>
+                  {{Compras_form.anno}}
+                </label>
+                <br>
+                <label for="mes">
+                  {{Compras_form.mes.label}}
+                  <br>
+                  {{Compras_form.mes}}
+                </label>
+                <label for="nroverificador">
+                  {{Compras_form.nroverificador.label}}
+                  <br>
+                  {{Compras_form.nroverificador}}
+                </label>
+              </div>
+            <div class="form-group">
+              <h2 class="headers headerscolor">Datos personales:</h2>
+              <br>
+                <label for="nom"> 
+                  {{Compras_form.nombrecompra.label}}
+                    <br>
+                    {{Compras_form.nombrecompra}}
+                </label>
+
+                <label for="ape" > 
+                    {{Compras_form.apellidocompra.label}}
+                    <br>
+                    {{Compras_form.apellidocompra}}                
+                </label>
+            </div>
+        <div class="form-group">
+            <label for="direccion">
+                {{Compras_form.direccioncompra.label}}
+                <br>
+                {{Compras_form.direccioncompra}}            
+                </label>
+            <label for="correo"> 
+            {{Compras_form.codigopostal.label}}
+            <br>
+            {{Compras_form.codigopostal}}
+                </label>
+        </div>
+        <label class="form-check-label" style="margin-left: 20px;">
+            <input class="form-check-input" type="checkbox" required> Acepto terminos y condiciones de la pagina
+
+          </label>
+          <br>
+          <label class="form-check-label" style="margin-left: 20px;">
+            <input class="form-check-input" type="checkbox"> Si, quiero recibir noticias de la página
+          </label>
+          <br>
+        <br>
+            <input type="submit" class="btn btn-danger boton botoncolor" id="boton1" value="Confirmar" >
+            <input type="reset" style="margin-left: 10px;" class="btn btn-danger boton botoncolor" id="boton1" value="Borrar todo" >
+           <br>
+
+            </form>
+            <div class="container my-5 text-center">
+              <h3 class="letrascolor">Recomendacion de pelicula:</h3>
+              <button class="btn btn-danger boton botoncolor " onclick="traer()" style="width: 300px;">Obtener</button>
+              <div class="mt-5" id="contenido">
+                  
+              </div>
+          </div>
+       
+          <script>
+              var contenido = document.querySelector('#contenido')
+              function traer() {
+                  fetch('https://randomuser.me/api/')
+                  .then(res => res.json())
+                  .then(data => {
+                      console.log(data.results['0'])
+                      contenido.innerHTML = `
+                      <img src="${data.results['0'].picture.large}" width="100px" class="img-fluid rounded-circle"> 
+                      <p class="letrascolorapi" >Nombre: ${data.results['0'].name.first}</p>
+                      <p class="letrascolorapi" >Apellido: ${data.results['0'].name.last}</p>
+                      <p class="letrascolorapi">Recomendacion: </p>
+                      `
+                  })
+              } 
+          </script>
+          </div>
+
+        </div>
+      </div>
+<!-- footer-->
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,124 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>Formulario de registro</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/estilos formularioregistro.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static './css/styleblack.css' %}" type="text/css">
+    <script>
+        $(function(){
+            $("formulario").validate({
+               rules: {
+                nombre: "required",
+                apellido: "required",
+                nomUsuario: "required",
+                direccion: "required",
+                correo: "required",
+                contraseña: "required",
+                      },   
+                      
+                 messages: 
+                  {
+                    nombre: {
+                      required: 'Ingresa tu nombre',
+                    },
+                    apellido: {
+                      required: 'Ingresa tu apellido',
+                  },
+                  nomUsuario:{
+                      required: 'Ingrese numero de usuario',
+                      
+                  },
+                  direccion:{
+                      required: 'Seleccione una direccion',
+                  },
+                  correo:{
+                      required: 'Seleccione una correo',
+                  },
+                  contraseña:{
+                      required: 'Seleccione una contraseña',
+                  },
+                   
+              }//messages
+          });
+        });
+    </script>
+
+</head>
+
+<body >
+ 
+      <div class="container" align="center" style="margin-top: 3cm; margin-bottom: 3cm;">
+        <div class="jumbotron formulario color" id="formulario">
+        <h1 class="headers headerscolor" id="headers"> Registro de cuenta: </h1>
+        <br>
+        <form action="#" method="POST" class="letraschicas letrascolor" id="formularioletras">
+            {%csrf_token%}
+            <div class="form-group">
+                <label for="nom"> 
+                    {{Usuarios_form.nombre.label}}
+                    <br>
+                    {{Usuarios_form.nombre}}
+                </label>
+
+                <label for="ape" > 
+                    {{Usuarios_form.apellido.label}}
+                    <br>
+                    {{Usuarios_form.apellido}}                
+                </label>
+            </div>
+        <div class="form-group">
+            <label for="user"> 
+                {{Usuarios_form.nomUsuario.label}}
+                <br>
+                {{Usuarios_form.nomUsuario}}
+            </label>
+            <label for="direccion">
+                {{Usuarios_form.direccion.label}}
+                <br>
+                {{Usuarios_form.direccion}}            
+                </label>
+        </div>
+        <div class="form-group ">
+            <label for="correo"> 
+            {{Usuarios_form.correo.label}}
+            <br>
+            {{Usuarios_form.correo}}
+                </label>
+            <label for="contraseña">   
+                {{Usuarios_form.contraseña.label}}
+                <br>
+                {{Usuarios_form.contraseña}}
+                
+            </label>
+        </div>
+        <label class="form-check-label" style="margin-left: 20px;">
+            <input class="form-check-input" type="checkbox" required> Acepto terminos y condiciones de la pagina
+
+          </label>
+          <br>
+          <label class="form-check-label" style="margin-left: 20px;">
+            <input class="form-check-input" type="checkbox"> Si, quiero recibir noticias de la página
+          </label>
+          <br>
+        <br>
+        <input type="submit" class="btn btn-danger boton botoncolor" id="boton1" value="Registrarse" >
+        <input type="reset" style="margin-left: 10px;" class="btn btn-danger boton botoncolor" id="boton1" value="Borrar todo" >
+
+        </form>
+        <br>
+
+    </div>
+      </div>
+</body>
+
+ <!-- footer-->
+
+{% endblock %}
+</html>

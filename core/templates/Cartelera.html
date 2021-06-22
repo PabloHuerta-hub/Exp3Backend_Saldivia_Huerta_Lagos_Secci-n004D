@@ -1,0 +1,215 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>Cartelera</title>{% endblock %}
+    
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilos galeria.css'%}">
+    <link rel="stylesheet" href="{% static 'css/styleblack.css' %}" type="text/css">
+</head>
+<body class="color">
+  
+ 
+<div class="descripcionPrincipal">
+<h3 class="headerscolor">Bienvenido a la cartelera de CineDuoc, aquí encontraras todos los estrenos en cartelera</h3>
+</div>
+        <div class="row">
+            <div class="col-md-4">
+              <div class="thumbnail">
+                  <img id="peli1" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong1" src="{% static 'img/galeria/1.jpg' %}" alt="imagen1" title="The Batman">
+
+                  <!-- Modal -->
+                  <div class="modal fade " id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog " role="document">
+                      <div class="modal-content color">
+                        <div class="modal-header">
+                          <h5 class="modal-title letrascolor" id="exampleModalLongTitle">The Batman</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body letrascolor">
+                          The Batman
+                          Nueva película de Batman, que estará más centrada en los cómics originales del personaje y con un estilo cercano al cine negro. Ben Affleck, tras interpretar tres veces al personaje, no repetirá en esta ocasión.
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger botoncolor" data-dismiss="modal">Cerrar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                  <img id="peli1" ype="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalLong2" src="{% static 'img/galeria/2.jpg' %}"  alt="imagen2" title="Liga de la Justicia de Zack Snyder">
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content color">
+                      <div class="modal-header">
+                        <h5 class="modal-title letrascolor" id="exampleModalLongTitle">Justice League Zack Snyder</h5>
+                        <button type="button " class="close botoncolor" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body letrascolor">
+                        Con la determinación de asegurar que el sacrificio definitivo de Superman (Henry Cavill) no fue en vano,
+                        Bruce Wayne (Ben Affleck) une fuerzas con Diana Prince (Gal Gadot) para reclutar a un equipo de metahumanos que protejan el mundo de una amenaza inminente de proporciones catastróficas.
+                        La tarea es más difícil de lo que Bruce imaginaba, ya que cada uno de los reclutas deberá enfrentarse a sus propios demonios para trascender aquello que los detenía, para unirse y formar de manera definitiva una liga de héroes sin precedentes.
+                        Ahora unidos, Batman, la Mujer Maravilla, Aquaman (Jason Momoa), Cyborg (Ray Fisher) y Flash (Ezra Miller) deberán salvar al planeta de la amenaza de Steppenwolf, DeSaad y Darkseid, antes de que sea demasiado tarde.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button btn-danger" class="btn btn-danger botoncolor" data-dismiss="modal">Cerrar</button>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                  <img id="peli1" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong3" src="{% static 'img/galeria/3.jpg' %}"  alt="imagen3" title="Un Amor Extraordinario">
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalLong3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content color">
+                      <div class="modal-header">
+                        <h5 class="modal-title letrascolor" id="exampleModalLongTitle">Un Amor Extraordinario</h5>
+                        <button type="button " class="close" data-dismiss="modal" aria-label="Cerrar">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body letrascolor">
+                        Drama ambientado en irlanda sobre Joan y Tom, un veterano matrimonio que se enfrenta a un gran impacto emocional cuando a ella la diagnostican cáncer de mama.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button btn-danger" class="btn  btn-danger botoncolor" data-dismiss="modal">Cerrar</button>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="thumbnail">
+                  <img id="peli1" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong4" src="{% static 'img/galeria/4.jpg' %}"  alt="imagen2" title="Volver Al Futuro FullHD">
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalLong4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content color ">
+                      <div class="modal-header">
+                        <h5 class="modal-title letrascolor" id="exampleModalLongTitle">Volver Al Futuro</h5>
+                        <button type="button " class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body letrascolor">
+                        El adolescente Marty McFly es amigo de Doc, un científico al que todos toman por loco. Cuando Doc crea una máquina para viajar en el tiempo,
+                         un error fortuito hace que Marty llegue a 1955, año en el que sus futuros padres aún no se habían conocido. Después de impedir su primer encuentro,
+                          deberá conseguir que se conozcan y se casen; de lo contrario, su existencia no sería posible.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger botoncolor" data-dismiss="modal">Cerrar</button>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </br>
+              <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="peli1" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong5" src="{% static 'img/galeria/5.jpg' %}"  alt="imagen2" title="GhostBuster 2 FullHD">
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalLong5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content color">
+                          <div class="modal-header">
+                            <h5 class="modal-title letrascolor" id="exampleModalLongTitle">GhostBusters II</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body letrascolor">
+                            Han pasado cinco años desde que los Cazafantasmas entraron por última vez en acción. El doctor Peter Venkman, notable parapsicólogo de persuasivos encantos,
+                            ha quedado relegado a maestro de ceremonias de un programa de televisión donde se discuten fenómenos psíquicos. Ray Stantz y su colega Winston Zeddemore se ganan la vida entreteniendo a niños en fiestas infantiles,
+                            y el mago tecnológico Egon Spengler continúa sus investigaciones sobre los efectos de las emociones humanas en el campo de energía psicomagnética.
+                            La relación de Dana Barrett con Venkman se disolvió; ella se casó con otro hombre y tuvo un hijo, pero el matrimonio fracasó.
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger botoncolor" data-dismiss="modal">Cerrar</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                </div>
+              </div>
+            </br>
+              <div class="col-md-4">
+                <div class="thumbnail">
+                    <img id="peli1" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong6" src="{% static 'img/galeria/6.jfif' %}"  alt="imagen2" title="Top Gun FullHD">
+    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalLong6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content color">
+                          <div class="modal-header">
+                            <h5 class="modal-title letrascolor" id="exampleModalLongTitle">Top Gun</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body letrascolor">
+                            La Marina de los Estados Unidos ha creado una escuela de élite para pilotos con el fin de sacar una promoción de expertos en técnicas de combate. En la academia, más conocida como Top Gun,
+                             a los mejores se les entrena para ser intrépidos y fríos al mismo tiempo, capaces de no perder los nervios en situaciones extremas y de no inmutarse al romper la barrera del sonido a los mandos de un F-14.
+                              A la escuela llega el joven Maverick, famoso por su temeraria aunque brillante forma de pilotar.
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger botoncolor" data-dismiss="modal">Cerrar</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+  
+                </div>
+              </div>
+              </div>
+
+        </br>
+    </br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+    
+</body>
+{% endblock %}
+</html>
