@@ -1,0 +1,46 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './css/estilos formularioregistro.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static './css/styleblack.css' %}" type="text/css">
+
+
+   
+    <div class="container" align="center" style="margin-top: 3cm; margin-bottom: 3cm; color: #ffffff;">
+        <div class="jumbotron formulario color" id="formulario">
+    {% if user.is_authenticated %}
+    <label>Ya estas logeado!</label>
+    <a href="{% url 'logout' %}">Cerrar Sesion</a>
+        
+    {% else %}
+   <form role="form" method="post">
+       {% csrf_token %}
+      <div class="formulario">
+        <label>Nombre de usuario:</label>
+              {{ form.username }}
+              {{ field.errors }}
+              </div>
+            </br>
+       <div class="formulario">
+             <label>Contraseña:</label>
+              {{ form.password }}
+              {{ field.errors }}
+                      </div>
+      
+            </br>
+          <button type="submit" class="btn btn-primary" value="login" >Login</button>
+    </form>
+      
+      {% endif %}
+    </div>
+      </div>
+
+{% endblock %}
+</html>

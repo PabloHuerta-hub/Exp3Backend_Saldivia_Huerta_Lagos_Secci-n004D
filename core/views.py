@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
-from .models import Usuarios,Compras
-from .forms import UsuariosForm,ComprasForm
+from .models import Usuarios,Compras, pelicula
+from .forms import UsuariosForm,ComprasForm, Peliculaform
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # Create your views here.
 def inicio(request):
     return render(request,'Inicio.html')
@@ -29,3 +30,21 @@ def formulario_compra(request):
     else:
         Compras_Form=ComprasForm()
     return render(request,'core/Compra.html',{'Compras_form':Compras_Form})
+
+def pelicula_form(request):
+
+    print("Se ha procesado la informacion")
+    formulario=Peliculaform(request.POST)
+    if request.method== 'POST':
+        
+        print("request post fue aceptado")
+        if formulario.is_valid():
+            print("Se ha guardado la informacion")
+            formulario.save()
+            datos['mensaje'] = "Guardados correctamente"
+        else:
+            print("no se valido naa la wa")
+    return render(request, 'core/pelicula_form.html', {'form':formulario})
+
+ 
+

@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Exp3Backend_Saldivia_Huerta_Lagos_Sección004D.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['./templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'Exp3Backend_Saldivia_Huerta_Lagos_Sección004D.wsgi.applicat
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/xe',
+        'NAME': '127.0.0.1:1522/xe',
         'USER': 'C##proyecto',
         'PASSWORD': 'experiencia3',
         'TEST': {
@@ -110,6 +110,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
+LOGIN_REDIRECT_URL = 'Inicio'
+LOGOUT_REDIRECT_URL = 'Inicio'
 
 LANGUAGE_CODE = 'en-us'
 

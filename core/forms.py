@@ -3,7 +3,7 @@ from django.forms import ModelForm
 from django.forms import widgets
 from django.forms.models import ModelChoiceField
 from django.forms.widgets import Widget
-from .models import Users,Usuarios,CategoriaCompra,Compras
+from .models import Users,Usuarios,CategoriaCompra,Compras,pelicula
 
 class UsuariosForm(forms.ModelForm):
     class Meta:
@@ -166,3 +166,8 @@ class ComprasForm(forms.ModelForm):
                 }
             )
         }
+
+class Peliculaform(ModelForm):
+    class Meta:
+        model= pelicula
+        fields= ['foto','nombre','sinopsis']
